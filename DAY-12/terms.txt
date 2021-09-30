@@ -1,0 +1,10 @@
+connecting redis with express.
+
+-Used middleswares in app.use =>
+session => store, client (to make secret)
+
+to connect postgres, make a pool
+Use pool to execute queries.
+put configs (users,port host etc)
+in a get route
+
