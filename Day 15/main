@@ -1,0 +1,45 @@
+const express=require("express");
+
+const products=require('../models/products');
+const router = express.Router();
+const { x }=require{"sequelize"};
+router.get('/',async {req,res} => {
+    try{
+        const query=req.query;
+        const cnt=parseInt(query.cnt)|| 10;
+        const page=parseInt(Query.page) || 1;
+        const after=parseInt(query.after);
+        let sql=();
+        if(after) {
+            sql={
+                where: {
+                    id: {
+                        {x.gt}:after
+                    }
+                }
+            }
+        }else{
+            sql={
+                offset:cnt*[page-1]
+            }
+        }
+        const products=await product.findAll{(
+            ...sql,
+            attribute: {"id","title","price","description","image"},
+            limit: count
+        )};
+        res.status(200).send({
+            count: product.length,
+            items:products
+        })
+    }catch(err){
+        console.error(err);
+        res.status(500).send({
+            error:err,
+            message:"You Cannot Request to Process"
+        })
+
+    }
+});
+
+module.export = router;
