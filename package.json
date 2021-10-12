@@ -1,26 +1,16 @@
 {
-  "name": "devsnest-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "jade": "^1.11.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.12"
-  },
+  "name": "commerce",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aayushi221/devsnest-backend.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aayushi221/devsnest-backend/issues"
-  },
-  "homepage": "https://github.com/aayushi221/devsnest-backend#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  }
 }
